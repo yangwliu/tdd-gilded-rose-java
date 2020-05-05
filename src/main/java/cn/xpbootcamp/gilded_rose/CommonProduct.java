@@ -21,7 +21,7 @@ public class CommonProduct extends Product{
     if (sellIn > 0) {
       setQuality(quality - speed >= 0? quality - speed : 0);
     } else {
-      setQuality(quality - 2 * speed);
+      setQuality(quality - 2 * speed >= 0 ? quality - 2 * speed : 0);
     }
   }
 }
