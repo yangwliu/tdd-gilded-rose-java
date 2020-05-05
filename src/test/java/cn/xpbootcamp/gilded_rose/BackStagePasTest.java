@@ -33,4 +33,11 @@ class BackStagePasTest {
     backStagePas.update();
     assertEquals(0, backStagePas.getQuality());
   }
+
+  @Test
+  void should_quality_upper_to_fifty_when_update_given_updated_quality_more_than_fifty() {
+    BackStagePas backStagePas = new BackStagePas(4, 48);
+    backStagePas.update();
+    assertEquals(50, backStagePas.getQuality());
+  }
 }
