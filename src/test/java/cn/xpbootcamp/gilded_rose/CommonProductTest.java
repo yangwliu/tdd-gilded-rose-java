@@ -20,4 +20,11 @@ class CommonProductTest {
     assertEquals(0, commonProduct.getQuality());
   }
 
+  @Test
+  void should_quality_lose_two_times_when_sellIn_no_more_than() {
+    CommonProduct commonProduct = new CommonProduct(0, 30, 5);
+    commonProduct.update();
+    assertEquals(2 * commonProduct.getSpeed(), 30 - commonProduct.getQuality());
+  }
+
 }
