@@ -14,6 +14,9 @@ public class BackStagePas extends Product {
     if (sellIn > 5 & sellIn <= 10) {
       quality += 2;
     }
+    if (sellIn <= 5 & sellIn > 0) {
+      quality += 3;
+    }
     setQuality(quality);
   }
 }
