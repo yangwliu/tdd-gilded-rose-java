@@ -26,4 +26,11 @@ class BackStagePasTest {
     backStagePas.update();
     assertEquals(33, backStagePas.getQuality());
   }
+
+  @Test
+  void should_quality_equals_0_when_update_given_sellIn_is_not_bigger_than_zero() {
+    BackStagePas backStagePas = new BackStagePas(0, 30);
+    backStagePas.update();
+    assertEquals(0, backStagePas.getQuality());
+  }
 }
