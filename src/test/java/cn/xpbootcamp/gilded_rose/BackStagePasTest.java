@@ -12,4 +12,11 @@ class BackStagePasTest {
     backStagePas.update();
     assertEquals(30, backStagePas.getQuality());
   }
+
+  @Test
+  void should_quality_plus_2_when_update_given_sellIn_is_no_more_than_ten_and_more_than_five() {
+    BackStagePas backStagePas = new BackStagePas(9, 30);
+    backStagePas.update();
+    assertEquals(32, backStagePas.getQuality());
+  }
 }

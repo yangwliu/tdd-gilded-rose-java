@@ -10,5 +10,10 @@ public class BackStagePas extends Product {
   public void update() {
     int sellIn = getSellIn();
     setSellIn(sellIn - 1);
+    double quality = getQuality();
+    if (sellIn > 5 & sellIn <= 10) {
+      quality += 2;
+    }
+    setQuality(quality);
   }
 }
