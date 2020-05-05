@@ -13,4 +13,10 @@ class ProductTest {
 
   }
 
+  @Test
+  void should_throw_exception_when_constructor_an_product_given_quality_less_than_zero() {
+    assertThrows(IllegalQualityException.class, () ->new Product(10, -10));
+
+  }
+
 }

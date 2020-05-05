@@ -9,7 +9,7 @@ public class Product {
 
   public Product(int sellIn, double quality) {
     if (quality > 50 || quality < 0) {
-      throw new IllegalQualityException("Quality should not more than 50!");
+      throw new IllegalQualityException("Quality should between 0 and 50!");
     }
     this.sellIn = sellIn;
     this.quality = quality;
