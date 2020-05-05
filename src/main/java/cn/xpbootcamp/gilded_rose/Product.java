@@ -1,16 +1,23 @@
 package cn.xpbootcamp.gilded_rose;
 
-public abstract class Product {
+import cn.xpbootcamp.gilded_rose.exception.IllegalQualityException;
+
+public class Product {
 
   private int sellIn;
   private double quality;
 
-  Product(int sellIn, double quality) {
+  public Product(int sellIn, double quality) {
+    if (quality > 50 || quality < 0) {
+      throw new IllegalQualityException("Quality should not more than 50!");
+    }
     this.sellIn = sellIn;
     this.quality = quality;
   }
 
-  abstract void update();
+  public void update() {
+
+  };
 
   public int getSellIn() {
     return sellIn;
