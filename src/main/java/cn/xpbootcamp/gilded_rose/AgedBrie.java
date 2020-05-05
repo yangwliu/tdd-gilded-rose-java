@@ -14,6 +14,6 @@ public class AgedBrie extends Product {
     int sellIn = getSellIn();
     setSellIn(sellIn - 1);
     double quality = getQuality() + speed;
-    setQuality(quality);
+    setQuality(quality <= 50 ? quality : 50);
   }
 }
